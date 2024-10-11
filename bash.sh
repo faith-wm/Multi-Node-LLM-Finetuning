@@ -1,9 +1,9 @@
 #!/bin/bash
-#SBATCH --job-name=q405b
-#SBATCH --nodes=2
+#SBATCH --job-name=finetuning  
+#SBATCH --nodes=2     #adjust to your number of nodes
 #SBATCH --ntasks-per-node=1  # crucial - only 1 task per node!
 #SBATCH --cpus-per-task=50
-#SBATCH --mem=980G
+#SBATCH --mem=980G     #Adjust memory per node here 
 #SBATCH --partition=gpu-xe9680q
 #SBATCH --gres=gpu:8        # Adjust number of GPUs per node here
 #SBATCH --output=%x-%j.out
