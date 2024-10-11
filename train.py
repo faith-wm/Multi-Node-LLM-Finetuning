@@ -95,7 +95,7 @@ def main():
     
     timestamp = time.strftime("%Y%m%d_%H")
     filename=re.search(r'(?<=Llama-3\.1-)\d+B', model_id).group(0)
-    out_dir = f'/scr1/users/mutindaf/finetuned_models/{filename}_{timestamp}'
+    out_dir = f'finetuned_models/{filename}_{timestamp}'
     os.makedirs(out_dir, exist_ok=True)
 
     dataset=datasets.load_dataset('json', data_files="training_data.jsonl", split='train') #tokenized training data with input_ids, attention_mask, and labels
